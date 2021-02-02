@@ -1,0 +1,415 @@
+body{
+  transition: all 1s ease; 
+  font-family: 'Noto Sans JP', sans-serif;
+  color : white;
+  margin:0;
+  padding:0;
+  width : 100vw;
+  height : 100vh;
+  background-color: #7648FF;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.topBar{
+  width : 100%;
+  height : calc(100vw*0.34);
+  background-color: #7648FF;
+  position: relative;
+}
+
+.loadingBar{
+  transition : all .6s ease;
+  opacity : 0;
+  width : 150px;
+  height : 15px;
+  border : 1px solid white;
+  position: absolute;
+  top : 60%;
+  left : 10%;
+}
+
+.containerBar{
+  width : 100%;
+  height : 100%;
+  position: relative;
+}
+
+.purpleBar{
+  opacity: 0;
+  width : 100%;
+  height : 100%;
+  position: absolute;
+  background-color: #7648FF;
+  top : 0%;
+  left : 0%;
+}
+
+.barComplete{
+  width : 0%;
+  height : 100%;
+  background-color: white;
+  position: absolute;
+  top : 0%;
+  left : 0%;
+}
+
+
+.title{
+  color : white;
+  width : 650px;
+  font-size: 48px;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight : 400;
+  position: absolute;
+  top : 5%;
+  left : 18%;
+}
+
+.backgroundContainer{
+  transition: all 1s ease;
+  background-color: #1D1D1D;
+  width : 60%;
+  height : 66%;
+  position: absolute;
+  bottom : 0px;
+  left : 0px;
+  z-index : 11;
+}
+
+.textPresentation{
+  transition: all .2s ease;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 350;
+  color : white;
+  position: absolute;
+  width : 80%;
+  left : 40%;
+  top : 15%;
+  margin-right : 5%;
+}
+
+#imgAxel{
+  width : 40%;
+  height : auto;
+  position: absolute;
+  top : 34%;
+  right : 0px;
+  z-index : 10;
+}
+
+/* NAV BAR */
+
+.navBar{
+  width : 20%;
+  height : 40%;
+  position: fixed;
+  top : 35%;
+  left : 2%;
+  z-index: 99;
+}
+
+.horizontalNavBar{
+  width : 1px;
+  height : 100%;
+  background-color: white;
+  position: absolute;
+  left : 10%;
+}
+
+.dotContainer{
+  height : 100%;
+  position: absolute;
+  left : 5%;
+  display : flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.dotNavBar{
+  transition : all .4s ease;
+  width : 30px;
+  height : 30px;
+  border-radius: 100%;
+  border : 1px solid white;
+  background-color: #1D1D1D;
+}
+
+.dotNavBar:first-child{
+  background-color: #7648FF;
+}
+
+.textDotContainer{
+  height : 100%;
+  position: absolute;
+  left : 25%;
+  display : flex;
+  flex-direction: column;
+  justify-content: space-around; 
+}
+
+.textDot:first-child{
+  font-size : 22px;
+}
+
+.textDot{
+  transition : all .4s ease;
+  color :white;
+  font-size : 16px;
+  cursor : pointer;
+}
+
+
+/* REALISATIONS */
+
+.realisationAllContainer{
+  margin : 250px 50px auto auto;
+  width : 75%;
+  height : auto;
+  display : flex;
+  padding-bottom : 200px;
+  flex-direction: column;
+}
+
+.realisationContainerLeft{
+  width : 90%;
+  height : 300px;
+  display : flex;
+}
+
+.realisationContainerRight{
+  width : 90%;
+  height : 300px;
+  display : flex;
+  margin : 150px 0px 150px auto;
+}
+
+.containerImgReal{
+  width : 40%;
+  height : 100%;
+  position: relative;
+}
+
+.imgReal{
+  transition : all .7s ease;
+  border-radius : 5%;
+  width : 100%;
+  height : 100%;
+  object-fit: cover;
+  position: absolute;
+  z-index : 5;
+}
+
+.imgReal:first-child{
+  z-index: 10;
+}
+
+.imgReal:first-child:hover{
+  opacity : 0;
+}
+
+.txtRealisationContainer{
+  width : 50%;
+  height : 90%;
+  margin : 10px 60px 40px;
+  color : white;
+  display : flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.titleRealisationRight{
+  text-align: end;
+}
+
+.paragrapheRight{
+  text-align: end;
+}
+
+
+.button1{
+  width : 140px;
+  height : 40px;
+  background-color: #7648FF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  cursor : pointer;
+}
+
+.btnRight{
+  margin : auto 0 auto auto;
+}
+
+
+.button1:hover{
+  transition : all .4s ease;
+  background-color: #916CFF;
+}
+
+/* DETAILS REALISATION */
+
+.detailsRealisationContainer{
+  width : 100%;
+  height : 100%;
+  position: absolute;
+  display : none;
+  z-index: 1000;
+}
+
+.blackDiv{
+  position: absolute;
+  width : 100%;
+  height: 100%;
+  opacity: .6;
+  background-color: black;
+  z-index: 1;
+}
+
+.detailsRealisation{
+  position: absolute;
+  width : 70%;
+  height: 80%;
+  z-index: 10;
+  background-color: #1D1D1D;
+  top : 10%;
+  left : 15%;
+  display: flex;
+}
+
+
+.infosDetails{
+  width : 50%;
+  height : 100%;
+  display : flex;
+  flex-direction: column; 
+  margin : 20px 40px 20px 40px;
+}
+
+.subTitle{
+  margin : 0;
+  font-weight: 500;
+}
+
+p{
+  font-weight: 100;
+}
+
+.centerBtn{
+  margin : 20px auto;
+}
+
+.videoContainer{
+  width : 600px;
+  height : 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.videoDetails{
+  width : auto;
+  height : 100%;
+  position: absolute;
+  left : -40%;
+}
+
+#textVideo{
+  background-color:#7648FF;
+  width : 100%;
+  height : 60px;
+  position: absolute;
+  bottom : 0%;
+  z-index: 10;
+  display : flex;
+  justify-content: center;
+  align-content: center;
+}
+
+#textVideo h3{
+  width: 100%;;
+  text-align: center;
+  font-size : 14px;
+}
+
+.inactive{
+  width : 200px;
+  height : 40px;
+  background-color: #D3D3D3;
+  color : black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  z-index: 5;
+}
+
+.linksContainer{
+  width : 80%;
+  margin : 0 auto;
+  height : 150px;
+  display : flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.linkLogo{
+  width : auto;
+  height : 50%;
+}
+
+.linksContainer a{
+  width : 30%;
+  display : flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#linkText{
+  margin : 0;
+  padding : 0;
+}
+
+a{
+  color : white;
+  text-decoration: none;
+}
+
+.closeDetails{
+  width : 40px;
+  height : 40px;
+  position: absolute;
+  top : 0%;
+  right : 0%;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+
+/* SLIDER */
+
+.sliderContainer{
+  width : 600px;
+  height : 100%;
+  overflow: hidden;
+  position: relative;
+  background-color: red;
+}
+
+.slider{
+  transition : all 1.4s ease;
+  width : 2400px;
+  height : 100%;
+  display : flex;
+  position: absolute;
+  top : 0%;
+  left : 0%;
+}
+
+.imgSlider{
+  width : 600px;
+  height : auto;
+}
