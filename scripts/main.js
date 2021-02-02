@@ -9,10 +9,11 @@ const purpleBar = document.querySelector('.purpleBar')
 
 maxScroll = document.documentElement.scrollHeight - document.documentElement.clientHeight
 
+
+
 window.addEventListener(
     'scroll',
     ()=>{
-        let maxHeight = body.offsetHeight
         const scrolled = window.scrollY
         if(scrolled>120){
         backgroundContainer.style.width="100%"
@@ -33,7 +34,7 @@ window.addEventListener(
                     loadingBar.style.opacity="0"
                 }
                 dotNavBar[0].style.backgroundColor="#7648FF"
-                textDot[0].style.fontSize="22px"
+                textDot[0].style.fontSize="20px"
             }
             if(scrolled>150){
                 for(let j=0; j<dotNavBar.length;j++){
@@ -46,7 +47,7 @@ window.addEventListener(
                     purpleBar.style.opacity=(scrolled-150)/(maxScroll-150)
                 }
                 dotNavBar[1].style.backgroundColor="#7648FF"
-                textDot[1].style.fontSize="22px"
+                textDot[1].style.fontSize="20px"
             }
         }
     }
@@ -105,8 +106,16 @@ for(let i=0;i<slider.length;i++){
 }
 
 const video = document.querySelector('.videoDetails')
+const simpsonDivContainer = document.querySelector('.simpsonDivContainer')
 
-let playVideo = false
+let playVideo = true
+
+simpsonDivContainer.addEventListener(
+    'mouseover',
+    ()=>{
+        video.play()
+    }
+)
 
 document.addEventListener('keydown', function (e){ // les touches au clavier 
     if(e.keyCode == 70) { // F

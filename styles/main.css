@@ -14,6 +14,16 @@ html {
   scroll-behavior: smooth;
 }
 
+@keyframes apparition{
+  from{
+    opacity: 0;
+    left : -5%;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
 .topBar{
   width : 100%;
   height : calc(100vw*0.34);
@@ -73,9 +83,9 @@ html {
   transition: all 1s ease;
   background-color: #1D1D1D;
   width : 60%;
-  height : 66%;
+  height : calc(100vw*0.27);
   position: absolute;
-  bottom : 0px;
+  top : 34%;
   left : 0px;
   z-index : 11;
 }
@@ -104,6 +114,8 @@ html {
 /* NAV BAR */
 
 .navBar{
+  animation-name: apparition;
+  animation-duration: 2s;
   width : 20%;
   height : 40%;
   position: fixed;
@@ -166,6 +178,8 @@ html {
 /* REALISATIONS */
 
 .realisationAllContainer{
+  animation-name: apparition;
+  animation-duration: 1s;
   margin : 250px 50px auto auto;
   width : 75%;
   height : auto;
@@ -339,7 +353,7 @@ p{
   width : 200px;
   height : 40px;
   background-color: #D3D3D3;
-  color : black;
+  color : #1D1D1D;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -363,6 +377,7 @@ p{
 
 .linksContainer a{
   width : 30%;
+  height : 65%;
   display : flex;
   justify-content: center;
   align-items: center;
@@ -412,4 +427,36 @@ a{
 .imgSlider{
   width : 600px;
   height : auto;
+}
+
+
+
+
+/* MEQUIA QUERIES */
+
+
+@media screen and (min-width : 1050px) and (max-width : 1108px){
+
+  .paragraphe{
+    font-size : 12px;
+  }
+
+
+}
+
+@media screen and (min-width : 700px) and (max-width : 1050px){
+
+  .titleRealisation{
+    font-size : 20px;
+  }
+
+  .subTitle{
+    font-size: 16px;
+  }
+
+  .paragraphe{
+    font-size : 10px;
+  }
+
+
 }
