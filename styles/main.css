@@ -417,15 +417,20 @@ p{
 }
 
 .inactive{
-  width : 200px;
-  height : 40px;
-  background-color: #D3D3D3;
-  color : #1D1D1D;
+  transition : all .4s ease;
+  width : 250px;
+  height : 50px;
+  background-color: #7648FF;
+  color : white;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 12px;
   z-index: 5;
+}
+
+.inactive:hover{
+  background-color: #916CFF;
 }
 
 .linksContainer{
@@ -468,6 +473,12 @@ a{
   right : 0%;
   z-index: 1000;
   cursor: pointer;
+}
+
+#ytbMini{
+  width : 25px;
+  height : auto;
+  padding-left : 10px;
 }
 
 
@@ -588,6 +599,11 @@ a{
     position: absolute;
     top : 25%;
     left : 0px;
+  }
+
+  .inactive{
+    width : 200px;
+    height : 50px;
   }
 
 
