@@ -6,9 +6,10 @@ const textDot = document.querySelectorAll('.textDot')
 const loadingBar = document.querySelector('.loadingBar')
 const barComplete = document.querySelector('.barComplete')
 const purpleBar = document.querySelector('.purpleBar')
+const infosContainer = document.querySelector('.infosContainer')
+const infosContainer2 = document.querySelector('.infosContainer2')
 
-maxScroll = document.documentElement.scrollHeight - document.documentElement.clientHeight
-
+maxScroll = document.documentElement.scrollHeight - document.documentElement.clientHeight - 300
 
 
 window.addEventListener(
@@ -20,11 +21,15 @@ window.addEventListener(
         textPresentation.style.top="0%"
         textPresentation.style.opacity="0"
         body.style.backgroundColor="#7648FF"
+        infosContainer.style.opacity="0"
+        infosContainer2.style.opacity="0"
         }
         if(scrolled<120){
             backgroundContainer.style.width="60%"
-            textPresentation.style.top="15%"
+            textPresentation.style.top="10%"
             textPresentation.style.opacity="1"
+            infosContainer.style.opacity="1"
+            infosContainer2.style.opacity="1"
             }
         for(let i=0; i<dotNavBar.length; i++){
             if(scrolled<120){
@@ -36,7 +41,7 @@ window.addEventListener(
                 dotNavBar[0].style.backgroundColor="#7648FF"
                 textDot[0].style.fontSize="20px"
             }
-            if(scrolled>150){
+            if(scrolled>150 && scrolled<3600){
                 for(let j=0; j<dotNavBar.length;j++){
                     dotNavBar[i].style.backgroundColor="#1D1D1D"
                     textDot[i].style.fontSize="16px"
@@ -48,6 +53,15 @@ window.addEventListener(
                 }
                 dotNavBar[1].style.backgroundColor="#7648FF"
                 textDot[1].style.fontSize="20px"
+            }
+            if(scrolled>3600){
+                for(let j=0; j<dotNavBar.length;j++){
+                    dotNavBar[i].style.backgroundColor="#1D1D1D"
+                    textDot[i].style.fontSize="16px"
+                    loadingBar.style.opacity="0"
+                }
+                dotNavBar[2].style.backgroundColor="#7648FF"
+                textDot[2].style.fontSize="20px"
             }
         }
     }
@@ -139,7 +153,7 @@ document.addEventListener('keydown', function (e){ // les touches au clavier
 
 const quiSuisJe = document.querySelector('#quiSuisJe')
 const mesRealisations = document.querySelector('#mesRealisations')
-const contact = document.querySelector('#contact')
+const maMusique = document.querySelector('#maMusique')
 
 quiSuisJe.addEventListener(
     'click',
@@ -152,5 +166,36 @@ mesRealisations.addEventListener(
     'click',
     ()=>{
         window.scrollTo(0, 740);
+    }
+)
+
+maMusique.addEventListener(
+    'click',
+    ()=>{
+        window.scrollTo(0,4000)
+    }
+)
+
+const txtRealisationContainerVSK = document.querySelector(".txtRealisationContainerVSK")
+const noBorderRadius = document.querySelector('.noBorderRadius:first-child')
+const noBorderRadius2 = document.querySelector('.noBorderRadius:last-child')
+
+
+txtRealisationContainerVSK.addEventListener(
+    'mouseover',
+    ()=>{
+        noBorderRadius.style.opacity = "0"
+        noBorderRadius2.style.opacity = ".6"
+        txtRealisationContainerVSK.style.transition="all 3s ease"
+        txtRealisationContainerVSK.style.transform="scale(1.2)"
+
+        txtRealisationContainerVSK.addEventListener(
+            'mouseout',
+            ()=>{
+                noBorderRadius.style.opacity = "1"
+                txtRealisationContainerVSK.style.transform="scale(1)"
+            }
+        )
+
     }
 )

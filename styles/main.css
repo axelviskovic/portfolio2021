@@ -88,17 +88,22 @@ html {
   top : 34%;
   left : 0px;
   z-index : 11;
+  display : flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 
 .textPresentation{
   transition: all .2s ease;
   font-family: 'Noto Sans JP', sans-serif;
   font-weight: 350;
+  font-size: 16px;
   color : white;
   position: absolute;
   width : 80%;
   left : 40%;
-  top : 15%;
+  top : 10%;
   margin-right : 5%;
 }
 
@@ -109,6 +114,22 @@ html {
   top : 34%;
   right : 0px;
   z-index : 10;
+}
+
+.infosContainer{
+  transition : all .4s ease;
+  width : 60%;
+  height : 30px;
+  display : flex;
+  margin-right : 0;
+  align-items: center;
+  padding-bottom : 50px;
+}
+
+.infosImg{
+  width : 40px;
+  height : 40px;
+  padding-right : 20px;
 }
 
 /* NAV BAR */
@@ -214,7 +235,19 @@ html {
   height : 100%;
   object-fit: cover;
   position: absolute;
-  z-index : 5;
+  z-index: 20;
+}
+
+.noBorderRadius{
+  transition : all .7s ease;
+  width : 100%;
+  height : 100%;
+  object-fit: cover;
+  position: absolute;
+}
+
+.noBorderRadius:first-child{
+  z-index : 10;
 }
 
 .imgReal:first-child{
@@ -255,6 +288,10 @@ html {
   cursor : pointer;
 }
 
+.voirPlus{
+  cursor: pointer;
+}
+
 .btnRight{
   margin : auto 0 auto auto;
 }
@@ -264,6 +301,36 @@ html {
   transition : all .4s ease;
   background-color: #916CFF;
 }
+
+.realisationContainerVSK{
+  width : 100%;
+  height : 600px;
+  position: relative;
+  background-color: black;
+}
+
+.containerImgRealVSK{
+  width : 100%;
+  height : 100%;
+  position: absolute;
+  top : 0;
+  left : 0;
+  z-index: 1;
+}
+
+.txtRealisationContainerVSK{
+  width : 100%;
+  height : 80%;
+  margin-top : 5%;
+  position: absolute;
+  display : flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 20;
+}
+
+
 
 /* DETAILS REALISATION */
 
@@ -407,7 +474,7 @@ a{
 /* SLIDER */
 
 .sliderContainer{
-  width : 600px;
+  width : 50%;
   height : 100%;
   overflow: hidden;
   position: relative;
@@ -441,10 +508,32 @@ a{
     font-size : 12px;
   }
 
+  .textPresentation{
+    font-size: 14px;
+  }
+
+  .infosContainer{
+    width : 30%;
+  }
+
+  .infosContainer p{
+    font-size: 14px;
+  }
+
+  .infosImg{
+    width : 30px;
+    height : 30px;
+    padding-right : 5px;
+  }
+
+  .backgroundContainer{
+    flex-direction: row;
+  }
+
 
 }
 
-@media screen and (min-width : 700px) and (max-width : 1050px){
+@media screen and  (max-width : 1050px){
 
   .titleRealisation{
     font-size : 20px;
@@ -456,6 +545,49 @@ a{
 
   .paragraphe{
     font-size : 10px;
+  }
+
+  .textPresentation{
+    font-size: 12px;
+  }
+
+  .detailsRealisation{
+    height : 70%;
+  }
+
+  .dotNavBar{
+    width : 20px;
+    height : 20px;
+  }
+
+  .infosContainer{
+    width : 30%;
+  }
+
+  .infosContainer p{
+    font-size: 11px;
+  }
+
+  .infosImg{
+    width : 20px;
+    height : 20px;
+    padding-right : 5px;
+  }
+
+  .backgroundContainer{
+    flex-direction: row;
+  }
+
+  .title{
+    width : 500px;
+    font-size: 36px;
+  }
+
+  .backgroundContainer{
+    height : calc(100vw*0.4);
+    position: absolute;
+    top : 25%;
+    left : 0px;
   }
 
 
