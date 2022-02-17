@@ -76,12 +76,13 @@ html {
   font-weight : 400;
   position: absolute;
   top : 5%;
-  left : 18%;
+  left : 23%;
 }
 
 .backgroundContainer{
   transition: all 1s ease;
   background-color: #1D1D1D;
+  border-radius: 0 20px 20px 0;
   width : 60%;
   height : calc(100vw*0.27);
   position: absolute;
@@ -98,10 +99,10 @@ html {
   transition: all .2s ease;
   font-family: 'Noto Sans JP', sans-serif;
   font-weight: 350;
-  font-size: 16px;
+  font-size: 18px;
   color : white;
   position: absolute;
-  width : 80%;
+  width : 55%;
   left : 40%;
   top : 10%;
   margin-right : 5%;
@@ -138,11 +139,12 @@ html {
   animation-name: apparition;
   animation-duration: 2s;
   width : 20%;
-  height : 40%;
+  height : calc(100vw*0.27);
   position: fixed;
-  top : 35%;
+  top : 34%;
   left : 2%;
   z-index: 99;
+  transition: all .8s ease;
 }
 
 .horizontalNavBar{
@@ -201,7 +203,7 @@ html {
 .realisationAllContainer{
   animation-name: apparition;
   animation-duration: 1s;
-  margin : 250px 50px auto auto;
+  margin : 300px 50px auto auto;
   width : 75%;
   height : auto;
   display : flex;
@@ -210,13 +212,13 @@ html {
 }
 
 .realisationContainerLeft{
-  width : 90%;
+  width : 100%;
   height : 300px;
   display : flex;
 }
 
 .realisationContainerRight{
-  width : 90%;
+  width : 100%;
   height : 300px;
   display : flex;
   margin : 150px 0px 150px auto;
@@ -230,7 +232,7 @@ html {
 
 .imgReal{
   transition : all .7s ease;
-  border-radius : 5%;
+  border-radius : 20px;
   width : 100%;
   height : 100%;
   object-fit: cover;
@@ -251,7 +253,7 @@ html {
 }
 
 .imgReal:first-child{
-  z-index: 10;
+  z-index: 30;
 }
 
 .imgReal:first-child:hover{
@@ -418,9 +420,9 @@ p{
 
 .inactive{
   transition : all .4s ease;
-  width : 250px;
-  height : 50px;
-  background-color: #7648FF;
+  width : 200px;
+  height : 40px;
+  background-color: #AFAFAF;
   color : white;
   display: flex;
   justify-content: center;
@@ -429,9 +431,6 @@ p{
   z-index: 5;
 }
 
-.inactive:hover{
-  background-color: #916CFF;
-}
 
 .linksContainer{
   width : 80%;
@@ -473,6 +472,7 @@ a{
   right : 0%;
   z-index: 1000;
   cursor: pointer;
+  padding : 5px;
 }
 
 #ytbMini{
@@ -503,8 +503,16 @@ a{
 }
 
 .imgSlider{
-  width : 600px;
-  height : auto;
+  width : auto;
+  height : 100%;
+  position: absolute;
+  left : -20%;
+}
+
+.containerImgSlider{
+  width: 60%;
+  overflow: hidden;
+  position: relative;
 }
 
 
@@ -512,8 +520,13 @@ a{
 
 /* MEQUIA QUERIES */
 
+@media screen and (max-width:1400px){
+  .textPresentation{
+    font-size : 14px;
+  }
+}
 
-@media screen and (min-width : 1050px) and (max-width : 1108px){
+@media screen and (min-width : 1050px) and (max-width : 1250px){
 
   .paragraphe{
     font-size : 12px;
@@ -546,6 +559,43 @@ a{
 
 @media screen and  (max-width : 1050px){
 
+  .realisationAllContainer{
+    width: 90%;
+    margin: 250px auto 0 auto;
+  }
+
+  .realisationContainerLeft{
+    height: 550px;
+    flex-direction: column;
+    margin: 0 auto;
+    padding-bottom: 100px;
+  }
+
+  .realisationContainerRight{
+    flex-direction: column-reverse;
+    margin: 0 auto;
+    height: 550px;
+    padding-bottom: 100px;
+  }
+
+  .realisationContainerRight .titleRealisationRight, .paragrapheRight{
+    text-align: left;
+  }
+
+  .txtRealisationContainer{
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .button1{
+    margin: 0 auto;
+  }
+
+  .containerImgReal {
+    width: 100%;
+}
+
+
   .titleRealisation{
     font-size : 20px;
   }
@@ -559,52 +609,76 @@ a{
   }
 
   .textPresentation{
-    font-size: 12px;
+    font-size: 14px;
+    left : 5%;
+    width : 90%;
   }
 
   .detailsRealisation{
     height : 70%;
   }
 
-  .dotNavBar{
-    width : 20px;
-    height : 20px;
+  .navBar{
+    display: none;
   }
 
+  /* .dotNavBar{
+    width : 20px;
+    height : 20px;
+  } */
+
   .infosContainer{
-    width : 30%;
+    width : 35%;
   }
 
   .infosContainer p{
-    font-size: 11px;
+    font-size: 14px;
   }
 
   .infosImg{
-    width : 20px;
-    height : 20px;
+    width : 25px;
+    height : 25px;
     padding-right : 5px;
   }
 
   .backgroundContainer{
     flex-direction: row;
+    top: 28%;
   }
 
-  .title{
-    width : 500px;
-    font-size: 36px;
+  #imgAxel{
+    top: 28%;
   }
 
-  .backgroundContainer{
-    height : calc(100vw*0.4);
+  .title {
+    position: static; 
+    text-align: center;
+    width: 70%;
+    margin: 0px auto;
+    padding-top: 50px;
+  }
+
+  /* .backgroundContainer{
     position: absolute;
-    top : 25%;
     left : 0px;
-  }
+  } */
 
   .inactive{
     width : 200px;
     height : 50px;
   }
 
+
+}
+
+@media screen and (max-width: 850px){
+
+  .title{
+    font-size: 38px;
+  }
+
+  .infosContainer{
+    display: none;
+  }
 
 }

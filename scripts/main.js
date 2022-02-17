@@ -1,6 +1,7 @@
 const backgroundContainer = document.querySelector('.backgroundContainer')
 const textPresentation = document.querySelector('.textPresentation')
 const body = document.querySelector('body')
+const navBar = document.querySelector('.navBar')
 const dotNavBar = document.querySelectorAll('.dotNavBar')
 const textDot = document.querySelectorAll('.textDot')
 const loadingBar = document.querySelector('.loadingBar')
@@ -23,6 +24,8 @@ window.addEventListener(
         body.style.backgroundColor="#7648FF"
         infosContainer.style.opacity="0"
         infosContainer2.style.opacity="0"
+        navBar.style.height="100%"
+        navBar.style.top="0"
         }
         if(scrolled<120){
             backgroundContainer.style.width="60%"
@@ -30,6 +33,8 @@ window.addEventListener(
             textPresentation.style.opacity="1"
             infosContainer.style.opacity="1"
             infosContainer2.style.opacity="1"
+            navBar.style.height="calc(100vw*0.27)"
+            navBar.style.top="34%"
             }
         for(let i=0; i<dotNavBar.length; i++){
             if(scrolled<120){
@@ -102,22 +107,22 @@ for(let i=0; i<voirPlus.length;i++){
     )
 }
 
-const slider = document.querySelectorAll('.slider')
+// const slider = document.querySelectorAll('.slider')
 
-for(let i=0;i<slider.length;i++){
+// for(let i=0;i<slider.length;i++){
 
-    let pos = 0
-    action = setInterval(
-            ()=>{
-                slider[i].style.left = pos*(-600)+"px"
-                pos++
-                if(pos==4){
-                    pos=0
-                }
-            },2400
-        )
+//     let pos = 0
+//     action = setInterval(
+//             ()=>{
+//                 slider[i].style.left = pos*(-600)+"px"
+//                 pos++
+//                 if(pos==4){
+//                     pos=0
+//                 }
+//             },2400
+//         )
 
-}
+// }
 
 const video = document.querySelector('.videoDetails')
 const simpsonDivContainer = document.querySelector('.simpsonDivContainer')
