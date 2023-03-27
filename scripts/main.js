@@ -9,9 +9,11 @@ const barComplete = document.querySelector('.barComplete')
 const purpleBar = document.querySelector('.purpleBar')
 const infosContainer = document.querySelector('.infosContainer')
 const infosContainer2 = document.querySelector('.infosContainer2')
+const videoSimpson = document.querySelector('video')
 
 maxScroll = document.documentElement.scrollHeight - document.documentElement.clientHeight - 300
 
+videoSimpson.currentTime=40
 
 window.addEventListener(
     'scroll',
@@ -177,7 +179,7 @@ mesRealisations.addEventListener(
 maMusique.addEventListener(
     'click',
     ()=>{
-        window.scrollTo(0,4000)
+        window.scrollTo(0,5000)
     }
 )
 
